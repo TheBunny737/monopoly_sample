@@ -2,13 +2,10 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        DataSourceDB dataSource = new DataSourceDB();
-        Map<Integer, Food> foods = dataSource.readFoods();
+        Player[] players = {new Player("Player 1"), new Player("Player 1")};
+        int N = 5;
 
-        RestaurantTable table1 = new RestaurantTable(1, foods);
-        RestaurantTable table2 = new RestaurantTable(2, foods);
-
-        table1.checkTableInformation();
-        table2.checkTableInformation();
+        Game game = new Game(N, players);
+        game.playGame();
     }
 }
